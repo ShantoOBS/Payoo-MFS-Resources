@@ -13,68 +13,259 @@
 
 </head>
 
-<body class="bg-[#f4f5f7] h-[100vh] ">
+<body class="bg-[#f4f5f7] h-full ">
 
-   <div class="max-w-xl mx-auto bg-white rounded-b-xl">
+    <!-- header part  -->
+    <div class="max-w-xl mx-auto bg-white rounded-b-xl">
 
-     <div class="flex justify-between items-center border-b-1 border-gray-400  p-5">
-        <div class="flex justify-center items-center ">
-            <img src="assets/Group.png" alt="" class="">
-            <div>
-                <p class="font-extrabold text-[20px]">$ <span>45000</span></p>
-                <p class="text-[#08080880]">Available Balance</p>
+        <div id="header">
+            <div class="flex justify-between items-center border-b-1 border-gray-400  p-5">
+                <div class="flex justify-center items-center ">
+                    <img src="assets/Group.png" alt="" class="">
+                    <div>
+                        <p class="font-extrabold text-[20px]">$ <span id="mainBalance">45000</span></p>
+                        <p class="text-[#08080880]">Available Balance</p>
+                    </div>
+                </div>
+
+                <div>
+                    <button id="logout"
+                        class="btn bg-[#f4f5f7] text-[#08080880] border-1 rounded-lg border-[#0808081a]">
+                        <i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>Log Out</button>
+                </div>
+            </div>
+
+            <div class=" p-5 mt-5">
+                <p class="font-extrabold text-[20px]">🔥 Welcome to Payooo!</p>
+                <p class="text-[#08080880] my-2">Enjoy easy and convenient financial services with us. Cashout charge is
+                    low
+                    and
+                </p>
             </div>
         </div>
 
-        <div>
-            <button id="logout" class="btn bg-[#f4f5f7] text-[#08080880] border-1 rounded-lg border-[#0808081a]">
-                <i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>Log Out</button>
+
+
+        <div class=" p-5  grid grid-cols-3 gap-4">
+
+            <div id="AddMoney"
+                class="common flex flex-col justify-center items-center rounded-xl border-1 border-gray-400 p-5 ">
+                <img src="assets/wallet1.png" alt="">
+                <p>Add Money</p>
+            </div>
+            <div id="Cashout"
+                class="common  flex flex-col justify-center items-center rounded-xl border-1 border-gray-400 p-5 ">
+                <img src="assets/send1.png" alt="">
+                <p>Cashout</p>
+            </div>
+            <div id="TransferMoney"
+                class="common flex flex-col justify-center items-center rounded-xl border-1 border-gray-400 p-5 ">
+                <img src="assets/money1.png" alt="">
+                <p>Transfer Money</p>
+            </div>
+            <div id="GetBonus"
+                class="common flex flex-col justify-center items-center rounded-xl border-1 border-gray-400 p-5 ">
+                <img src="assets/bonus1.png" alt="">
+                <p>Get Bonus
+                </p>
+            </div>
+            <div id="PayBill"
+                class="common flex flex-col justify-center items-center rounded-xl border-1 border-gray-400 p-5 ">
+                <img src="assets/purse1.png" alt="">
+                <p>Pay Bill</p>
+            </div>
+            <div id="Transactions"
+                class="common flex flex-col justify-center items-center rounded-xl border-1 border-gray-400 p-5 ">
+                <img src="assets/transaction1.png" alt="">
+                <p>Transactions</p>
+            </div>
+
+
         </div>
+
+
+
     </div>
 
-    <div class=" p-5 mt-5">
-        <p class="font-extrabold text-[20px]">🔥 Welcome to Payooo!</p>
-        <p class="text-[#08080880] my-2">Enjoy easy and convenient financial services with us. Cashout charge is low and
-        </p>
+    <div class="max-w-xl mx-auto p-6 section " id="add-money-section">
+
+        <p class="font-bold max-w-xl mx-auto my-5">Add Money</p>
+
+        <form class="bg-white rounded-xl max-w-xl mx-auto p-5 ">
+
+            <div>
+                <label for="" class="text-[1rem] font-semibold">Select A Bank</label>
+                <br>
+                <select id="select" class="select w-full bg-[#f4f5f7] rounded-3xl my-3">
+                    <option disabled selected>Select back</option>
+                    <option>City bank</option>
+                    <option>IFAC bank</option>
+                    <option>BD bank</option>
+                </select>
+            </div>
+            <div>
+                <label for="" class="text-[1rem] font-semibold">Bank Account Number</label>
+                <br>
+                <input type="text" id="BankNumber" placeholder="Enter 11 digit account number"
+                    class="input w-full bg-[#f4f5f7] rounded-3xl my-3" />
+            </div>
+            <div class="">
+                <label for=" " class="text-[1rem] font-semibold">Amount to Add</label>
+                <br>
+                <input type="text" id="AmountoAdd" placeholder="Add Amount to Add"
+                    class="input w-full bg-[#f4f5f7] rounded-3xl my-3" />
+            </div>
+            <div class="">
+                <label for=" " class="text-[1rem] font-semibold ">Pin Number</label>
+                <br>
+                <input type="text" id="PinNumber" placeholder="Enter 4 digit pin"
+                    class="input w-full bg-[#f4f5f7] rounded-3xl my-3" />
+            </div>
+            <button class="btn btn-primary w-full rounded-full my-5 bg-[#0874f2] " id="add-money-btn">Add Money</button>
+        </form>
+
+
+
+    </div>
+
+    <div class="max-w-xl mx-auto p-6 section" id="cash-out-section">
+
+        <p class="font-bold max-w-xl mx-auto my-5">Cash Out</p>
+
+        <form class="bg-white rounded-xl max-w-xl mx-auto p-5 ">
+
+
+            <div>
+                <label for="" class="text-[1rem] font-semibold">Agent Number</label>
+                <br>
+                <input type="text" id="AgentNumber" placeholder="Enter 11 digit account number"
+                    class="input w-full bg-[#f4f5f7] rounded-3xl my-3" />
+            </div>
+            <div class="">
+                <label for=" " class="text-[1rem] font-semibold">Amount</label>
+                <br>
+                <input type="text" id="AmountWithdraw" placeholder="Add Amount to withdraw"
+                    class="input w-full bg-[#f4f5f7] rounded-3xl my-3" />
+            </div>
+            <div class="">
+                <label for=" " class="text-[1rem] font-semibold ">Pin Number</label>
+                <br>
+                <input type="text" id="PinNumberCash" placeholder="Enter 4 digit pin"
+                    class="input w-full bg-[#f4f5f7] rounded-3xl my-3" />
+            </div>
+            <button class="btn btn-primary w-full rounded-full my-5 bg-[#0874f2] " id="withdraw-money-btn">Withdraw
+                Money</button>
+        </form>
+
+
+
     </div>
 
 
-    <div class=" p-5  grid grid-cols-3 gap-4">
+    <div class="max-w-xl mx-auto p-6 section" id="transfer-money-section">
 
-        <div class="flex flex-col justify-center items-center rounded-xl border-1 border-gray-400 p-5 ">
-            <img src="assets/wallet1.png" alt="">
-            <p>Add Money</p>
-        </div>
-        <div class="flex flex-col justify-center items-center rounded-xl border-1 border-gray-400 p-5 ">
-            <img src="assets/send1.png" alt="">
-            <p>Cashout</p>
-        </div>
-        <div class="flex flex-col justify-center items-center rounded-xl border-1 border-gray-400 p-5 ">
-            <img src="assets/money1.png" alt="">
-            <p>Transfer Money</p>
-        </div>
-        <div class="flex flex-col justify-center items-center rounded-xl border-1 border-gray-400 p-5 ">
-            <img src="assets/bonus1.png" alt="">
-            <p>Get Bonus
-            </p>
-        </div>
-        <div class="flex flex-col justify-center items-center rounded-xl border-1 border-gray-400 p-5 ">
-            <img src="assets/purse1.png" alt="">
-            <p>Pay Bill</p>
-        </div>
-        <div class="flex flex-col justify-center items-center rounded-xl border-1 border-gray-400 p-5 ">
-            <img src="assets/transaction1.png" alt="">
-            <p>Transactions</p>
-        </div>
-       
-        
+        <p class="font-bold max-w-xl mx-auto my-5">Transfer Money</p>
+
+        <form class="bg-white rounded-xl max-w-xl mx-auto p-5 ">
+
+
+            <div>
+                <label for="" class="text-[1rem] font-semibold">User Account Number</label>
+                <br>
+                <input type="text" id="UserAccountNumber" placeholder="Enter 11 digit account number"
+                    class="input w-full bg-[#f4f5f7] rounded-3xl my-3" />
+            </div>
+            <div class="">
+                <label for=" " class="text-[1rem] font-semibold">Amount</label>
+                <br>
+                <input type="text" id="AmountTransfer" placeholder="Enter amount to transfer"
+                    class="input w-full bg-[#f4f5f7] rounded-3xl my-3" />
+            </div>
+            <div class="">
+                <label for=" " class="text-[1rem] font-semibold ">Pin Number</label>
+                <br>
+                <input type="text" id="PinNumberTransfer" placeholder="Enter 4 digit pin"
+                    class="input w-full bg-[#f4f5f7] rounded-3xl my-3" />
+            </div>
+            <button class="btn btn-primary w-full rounded-full my-5 bg-[#0874f2] " id="send-now-btn">Send Now</button>
+        </form>
+
+
+
     </div>
 
 
-       
-   </div>
+    <div class="max-w-xl mx-auto p-6 section" id="get-bonus-section">
 
-   
+        <p class="font-bold max-w-xl mx-auto my-5">Get Bonus</p>
+
+        <form class="bg-white rounded-xl max-w-xl mx-auto p-5 ">
+
+            <div class="">
+                <label for=" " class="text-[1rem] font-semibold ">Enter Bonus Coupon</label>
+                <br>
+                <input type="text" id="EnterBonusCoupon" placeholder="Enter your coupon"
+                    class="input w-full bg-[#f4f5f7] rounded-3xl my-3" />
+            </div>
+            <button class="btn btn-primary w-full rounded-full my-5 bg-[#0874f2] " id="get-bonus-btn">Get Bonus</button>
+        </form>
+
+
+
+    </div>
+
+    <div class="max-w-xl mx-auto p-6 section " id="pay-bill-section">
+
+        <p class="font-bold max-w-xl mx-auto my-5">Pay Bill</p>
+
+        <form class="bg-white rounded-xl max-w-xl mx-auto p-5 ">
+
+            <div>
+                <label for="" class="text-[1rem] font-semibold">Select To Pay</label>
+                <br>
+                <select id="select" class="select w-full bg-[#f4f5f7] rounded-3xl my-3">
+                    <option disabled selected>Select back</option>
+                    <option>City bank</option>
+                    <option>IFAC bank</option>
+                    <option>BD bank</option>
+                </select>
+            </div>
+            <div>
+                <label for="" class="text-[1rem] font-semibold">Biller Account Number</label>
+                <br>
+                <input type="text" id="BillerAccountNumber" placeholder="Enter 11 digit account number"
+                    class="input w-full bg-[#f4f5f7] rounded-3xl my-3" />
+            </div>
+            <div class="">
+                <label for=" " class="text-[1rem] font-semibold">Amount to Pay</label>
+                <br>
+                <input type="text" id="AmounttoPay" placeholder="Amount to Pay"
+                    class="input w-full bg-[#f4f5f7] rounded-3xl my-3" />
+            </div>
+            <div class="">
+                <label for=" " class="text-[1rem] font-semibold ">Pin Number</label>
+                <br>
+                <input type="text" id="PinNumberPay" placeholder="Enter 4 digit pin"
+                    class="input w-full bg-[#f4f5f7] rounded-3xl my-3" />
+            </div>
+            <button class="btn btn-primary w-full rounded-full my-5 bg-[#0874f2] " id="pay-now-btn">Pay Now</button>
+        </form>
+
+
+
+    </div>
+
+
+    <div class="max-w-xl mx-auto p-6 section " id="transaction-history-section">
+
+        <div class="max-w-xl mx-auto flex justify-between items-center my-5 ">
+            <p class="font-bold ">Transaction History</p>
+            <p class="  ">View All</p>
+        </div>
+
+    </div>
+
+
 
 
 
