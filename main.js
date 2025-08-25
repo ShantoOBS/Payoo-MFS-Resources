@@ -11,7 +11,30 @@ document.getElementById("logout").addEventListener("click", () => {
 });
 
 
+function removeSection() {
+     const vec = document.querySelectorAll(".section");
+     for (let x of vec) x.style.display = "none";
+}
 
+function reomveColor(e="str") {
+     const vec = document.querySelectorAll(".common");
+
+     for (let x of vec) {
+          x.classList.remove("border-gray-400", "border-blue-500", "border-1", "border-2");
+     }
+
+     for (let x of vec) {
+          x.classList.add("border-gray-400", "border-1");
+     }
+
+     if(e==="str")return ;
+
+     document.getElementById(e).classList.remove("border-gray-400", "border-1");
+     document.getElementById(e).classList.add("border-blue-500", "border-2");
+
+}
+
+removeSection();
 
 // Add Money section 
 document.getElementById("add-money-btn").addEventListener("click", (e) => {
@@ -128,28 +151,7 @@ document.getElementById("pay-now-btn").addEventListener("click", (e) => {
 
 
 
-function removeSection() {
-     const vec = document.querySelectorAll(".section");
-     for (let x of vec) x.style.display = "none";
-}
 
-function reomveColor(e="str") {
-     const vec = document.querySelectorAll(".common");
-
-     for (let x of vec) {
-          x.classList.remove("border-gray-400", "border-blue-500", "border-1", "border-2");
-     }
-
-     for (let x of vec) {
-          x.classList.add("border-gray-400", "border-1");
-     }
-
-     if(e==="str")return ;
-
-     document.getElementById(e).classList.remove("border-gray-400", "border-1");
-     document.getElementById(e).classList.add("border-blue-500", "border-2");
-
-}
 document.getElementById("AddMoney").addEventListener("click", function () {
 
      removeSection();
