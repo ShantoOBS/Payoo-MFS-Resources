@@ -28,7 +28,8 @@
       <li><strong>Tailwind CSS</strong> – Styling and responsive mobile layout</li>
       <li><strong>JavaScript</strong> – Dynamic content creation and DOM manipulation</li>
       <li><strong>Font Awesome</strong> – UI icons</li>
-       <li><strong>Daisyui</strong> – Tailwind CSS Component</li>
+      <li><strong>Daisyui</strong> – Tailwind CSS Component</li>
+      <li><strong>Pixso</strong> – Dev mode </li>
     </ul>
      <h2 id="installation">Installation</h2>
     <ol>
