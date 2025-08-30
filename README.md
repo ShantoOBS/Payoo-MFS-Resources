@@ -15,7 +15,7 @@
 <h2 id="demo">📱 Demo</h2>
 <p>Add a mobile preview screenshot</p>
 <img id="mobile-screenshot" width="450" height="1189" alt="Image" src="https://github.com/user-attachments/assets/63b2e67a-3f17-4fc9-9250-d604d5adc0c5" />
-<p><a href="https://yourusername.github.io/Payoo-MFS" target="_blank">Live Preview</a></p>
+<p><a href="https://shantoobs.github.io/Payoo-MFS-Resources/" target="_blank">Live Preview</a></p>
 
 <h2 id="features">✨ Features</h2>
 <ul>
